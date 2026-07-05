@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запрошення ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="hearts"></div>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>❤️</h1>
+
+            <h2>У мене є одне маленьке питання...</h2>
+
+            <p class="text">
+                Мені дуже хочеться провести з тобою один особливий день.
+                Неважливо де...
+                Неважливо коли...
+                Головне — щоб поруч була саме ти. 🌹
+            </p>
+
+            <button id="openBtn">
+                Відкрити запрошення 💌
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="popup" id="popup">
+
+        <div class="formCard">
+
+            <h2>🌹 Запрошую тебе на прогулянку 🌹</h2>
+
+            <p>
+
+                Буду дуже радий, якщо погодишся ❤️
+
+            </p>
+
+            <form id="dateForm">
+
+                <label>
+
+                    📅 Обери дату
+
+                </label>
+
+                <input type="date" name="date" required>
+
+                <label>
+
+                    🕒 Обери час
+
+                </label>
+
+                <input type="time" name="time" required>
+
+                <label>
+
+                    📍 Куди хочеш піти?
+
+                </label>
+
+                <select name="place" id="place">
+
+                    <option value="Парк">🌳 Парк</option>
+
+                    <option value="Кав'ярня">☕ Кав'ярня</option>
+
+                    <option value="Ресторан">🍽️ Ресторан</option>
+
+                    <option value="Кіно">🎬 Кіно</option>
+
+                    <option value="Набережна">🌅 Набережна</option>
+
+                    <option value="Морозиво">🍦 Морозиво</option>
+
+                    <option value="Інше">✨ Інше</option>
+
+                </select>
+
+                <input type="text" placeholder="Якщо інше..." id="customPlace" style="display:none;">
+
+                <label>
+
+                    💌 Побажання
+
+                </label>
+
+                <textarea id="message" placeholder="Напиши що хочеш ❤️"></textarea>
+
+                <button type="submit">
+
+                    💖 Надіслати відповідь
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div id="success">
+
+        <div class="successCard">
+
+            <h2>❤️</h2>
+
+            <h1>Дякую!</h1>
+
+            <p>
+
+                Я вже отримав твою відповідь 💌
+
+                З нетерпінням чекатиму нашої зустрічі 🌹
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <audio id="music" loop>
+
+        <source src="music.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

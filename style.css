@@ -1,0 +1,713 @@
+/* ===== Google Fonts ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    overflow-x: hidden;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: linear-gradient(135deg,
+            #ff9ec7,
+            #ff6b9d,
+            #ff4f81,
+            #ff8ab5);
+
+    background-size: 400% 400%;
+
+    animation: bgMove 18s ease infinite;
+
+}
+
+@keyframes bgMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+.container {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 2;
+
+}
+
+.card {
+
+    width: 420px;
+
+    max-width: 95%;
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, .18);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+
+    text-align: center;
+
+    animation: fadeUp 1.2s;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(80px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.card h1 {
+
+    font-size: 70px;
+
+    margin-bottom: 10px;
+
+    animation: pulse 2s infinite;
+
+}
+
+.card h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 48px;
+
+    color: white;
+
+    margin-bottom: 25px;
+
+}
+
+.text {
+
+    color: white;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+}
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 18px 35px;
+
+    border-radius: 50px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    background: white;
+
+    color: #ff4b83;
+
+    transition: .35s;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+
+}
+
+button:hover {
+
+    transform: translateY(-5px) scale(1.05);
+
+    background: #ffe5ef;
+
+}
+
+.popup {
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(0, 0, 0, .55);
+
+    z-index: 20;
+
+}
+
+.formCard {
+
+    width: 520px;
+
+    max-width: 95%;
+
+    padding: 35px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    animation: popup .5s;
+
+}
+
+@keyframes popup {
+
+    from {
+
+        transform: scale(.6);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+.formCard h2 {
+
+    text-align: center;
+
+    color: #ff4b83;
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+
+    font-family: "Great Vibes", cursive;
+
+}
+
+.formCard p {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 18px;
+
+}
+
+label {
+
+    display: block;
+
+    margin-top: 18px;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+
+    color: #ff4b83;
+
+}
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    border: 2px solid #ffd3e2;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: .3s;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    border-color: #ff4b83;
+
+}
+
+textarea {
+
+    height: 120px;
+
+    resize: none;
+
+}
+
+.formCard button {
+
+    margin-top: 25px;
+
+    width: 100%;
+
+    background: #ff4b83;
+
+    color: white;
+
+}
+
+.formCard button:hover {
+
+    background: #ff2d72;
+
+}
+
+/* ========= SUCCESS ========= */
+
+#success {
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(0, 0, 0, .7);
+
+    z-index: 100;
+
+    backdrop-filter: blur(10px);
+
+}
+
+.successCard {
+
+    width: 500px;
+
+    max-width: 90%;
+
+    padding: 45px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    text-align: center;
+
+    animation: success .6s;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+
+}
+
+.successCard h2 {
+
+    font-size: 70px;
+
+    animation: pulse 2s infinite;
+
+}
+
+.successCard h1 {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 52px;
+
+    color: #ff4b83;
+
+    margin: 20px 0;
+
+}
+
+.successCard p {
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: #555;
+
+}
+
+@keyframes success {
+
+    0% {
+
+        transform: scale(.4);
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+/* ========= HEARTS ========= */
+
+#hearts {
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+
+}
+
+.heart {
+
+    position: absolute;
+
+    font-size: 25px;
+
+    animation: floatHeart linear forwards;
+
+    opacity: .85;
+
+}
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform: translateY(100vh) scale(.6);
+
+        opacity: 0;
+
+    }
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: translateY(-120px) rotate(360deg) scale(1.5);
+
+        opacity: 0;
+
+    }
+
+}
+
+/* ========= INPUT EFFECT ========= */
+
+input:hover,
+select:hover,
+textarea:hover {
+
+    transform: scale(1.02);
+
+}
+
+input,
+select,
+textarea {
+
+    transition: .35s;
+
+}
+
+/* ========= BUTTON ========= */
+
+button:active {
+
+    transform: scale(.96);
+
+}
+
+/* ========= SCROLL ========= */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #ff4b83;
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #ffe5ef;
+
+}
+
+/* ========= GLOW ========= */
+
+.card {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    background: rgba(255, 255, 255, .25);
+
+    border-radius: 50%;
+
+    top: -120px;
+
+    left: -120px;
+
+    filter: blur(10px);
+
+}
+
+.card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    background: rgba(255, 255, 255, .2);
+
+    border-radius: 50%;
+
+    bottom: -90px;
+
+    right: -90px;
+
+}
+
+/* ========= PULSE ========= */
+
+@keyframes pulse {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.15);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+/* ========= MOBILE ========= */
+
+@media(max-width:768px) {
+
+    .card {
+
+        padding: 30px 25px;
+
+    }
+
+    .card h2 {
+
+        font-size: 40px;
+
+    }
+
+    .text {
+
+        font-size: 17px;
+
+    }
+
+    .formCard {
+
+        padding: 25px;
+
+    }
+
+    .formCard h2 {
+
+        font-size: 30px;
+
+    }
+
+    .successCard {
+
+        padding: 30px;
+
+    }
+
+    .successCard h1 {
+
+        font-size: 42px;
+
+    }
+
+    .successCard p {
+
+        font-size: 18px;
+
+    }
+
+    button {
+
+        padding: 16px;
+
+        font-size: 17px;
+
+    }
+
+}
+
+/* ========= SMALL MOBILE ========= */
+
+@media(max-width:430px) {
+
+    .card h1 {
+
+        font-size: 55px;
+
+    }
+
+    .card h2 {
+
+        font-size: 34px;
+
+    }
+
+    .text {
+
+        font-size: 16px;
+
+    }
+
+    .formCard h2 {
+
+        font-size: 26px;
+
+    }
+
+    .successCard h2 {
+
+        font-size: 55px;
+
+    }
+
+    .successCard h1 {
+
+        font-size: 34px;
+
+    }
+
+}
