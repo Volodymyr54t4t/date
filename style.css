@@ -672,42 +672,138 @@ button:active {
 
 /* ========= SMALL MOBILE ========= */
 
-@media(max-width:430px) {
+@media (max-width: 430px) {
+
+    .container {
+        padding: 16px 10px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 28px 18px;
+        border-radius: 24px;
+    }
 
     .card h1 {
-
-        font-size: 55px;
-
+        font-size: 50px;
     }
 
     .card h2 {
-
-        font-size: 34px;
-
+        font-size: 32px;
     }
 
     .text {
-
         font-size: 16px;
+        line-height: 1.75;
+        margin-bottom: 24px;
+    }
 
+    button {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .formCard {
+        width: 100%;
+        max-width: 100%;
+        padding: 24px 18px;
+        border-radius: 24px;
     }
 
     .formCard h2 {
+        font-size: 28px;
+    }
 
-        font-size: 26px;
+    .formCard p {
+        font-size: 16px;
+    }
 
+    label {
+        margin-top: 14px;
+        font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 13px;
+        font-size: 14px;
+    }
+
+    textarea {
+        height: 110px;
+    }
+
+    .successCard {
+        width: 100%;
+        max-width: 100%;
+        padding: 28px 20px;
+        border-radius: 24px;
     }
 
     .successCard h2 {
-
-        font-size: 55px;
-
+        font-size: 50px;
     }
 
     .successCard h1 {
-
         font-size: 34px;
-
     }
 
+    .successCard p {
+        font-size: 16px;
+    }
+
+    .popup,
+    #success {
+        align-items: center;
+        padding: 16px;
+    }
+
+    .popup {
+        overflow-y: auto;
+    }
 }
+
+@media (max-width: 360px) {
+
+    .card h1 {
+        font-size: 44px;
+    }
+
+    .card h2 {
+        font-size: 28px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+
+    .formCard {
+        padding: 22px 16px;
+    }
+
+    .formCard h2 {
+        font-size: 26px;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 12px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .successCard {
+        padding: 24px 16px;
+    }
+
+    .successCard h1 {
+        font-size: 32px;
+    }
+}
+
